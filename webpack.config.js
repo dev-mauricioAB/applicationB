@@ -4,8 +4,13 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const deps = require("./package.json").dependencies;
 module.exports = {
   devtool: "source-map",
+
+  optimization: {
+    runtimeChunk: false,
+  },
+
   output: {
-    publicPath: "auto",
+    publicPath: "https://application-b.vercel.app/",
   },
 
   resolve: {
@@ -46,7 +51,7 @@ module.exports = {
       filename: "remoteEntry.js",
       remotes: {
         componentsLibrary:
-          "components_library@https://components-library-git-develop-dev-mauricioab.vercel.app/remoteEntry.js",
+          "components_library@https://components-library-react.vercel.app/remoteEntry.js",
       },
       exposes: {
         "./AppB": "./src/App.tsx",
