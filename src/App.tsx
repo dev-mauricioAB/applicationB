@@ -20,7 +20,7 @@ export const AppB: React.FC<AppBProps> = ({ clickLogo }) => {
         <div>Language: TypeScript</div>
         <div>CSS: Tailwind</div>
       </div>
-      <Footer />
+      <Footer title="Footer in AppB" />
     </>
   );
 };
