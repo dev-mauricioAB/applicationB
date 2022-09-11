@@ -10,7 +10,7 @@ module.exports = {
   },
 
   output: {
-    publicPath: "https://application-b.vercel.app/",
+    publicPath: "auto",
   },
 
   resolve: {
